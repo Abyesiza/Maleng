@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- School Building -->
+  <path d="M200 200 L400 100 L600 200 L600 500 L200 500 Z" fill="#FFB74D" stroke="#F57C00" stroke-width="4"/>
+  
+  <!-- Roof -->
+  <path d="M400 100 L600 200 L200 200 Z" fill="#FF9800" stroke="#F57C00" stroke-width="4"/>
+  
+  <!-- Door -->
+  <path d="M350 350 L450 350 L450 500 L350 500 Z" fill="#795548" stroke="#5D4037" stroke-width="4"/>
+  <circle cx="430" cy="425" r="8" fill="#FDD835"/>
+  
+  <!-- Windows -->
+  <rect x="250" y="250" width="60" height="60" rx="10" fill="#B3E5FC" stroke="#0288D1" stroke-width="4"/>
+  <rect x="490" y="250" width="60" height="60" rx="10" fill="#B3E5FC" stroke="#0288D1" stroke-width="4"/>
+  <rect x="250" y="350" width="60" height="60" rx="10" fill="#B3E5FC" stroke="#0288D1" stroke-width="4"/>
+  <rect x="490" y="350" width="60" height="60" rx="10" fill="#B3E5FC" stroke="#0288D1" stroke-width="4"/>
+  
+  <!-- Flag -->
+  <line x1="600" y1="100" x2="600" y2="180" stroke="#757575" stroke-width="4"/>
+  <path d="M600 100 L650 120 L600 140" fill="#EF5350"/>
+  
+  <!-- Steps -->
+  <rect x="320" y="500" width="160" height="20" fill="#BDBDBD"/>
+  <rect x="300" y="520" width="200" height="20" fill="#9E9E9E"/>
+  
+  <!-- Decorative Elements -->
+  <circle cx="150" cy="150" r="20" fill="#FFD54F" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="650" cy="150" r="15" fill="#81D4FA" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="400" cy="50" r="25" fill="#CE93D8" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+</svg> 

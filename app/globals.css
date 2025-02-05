@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: 255, 152, 0; /* Orange */
+  --secondary-color: 156, 39, 176; /* Purple */
+  --accent-color: 0, 188, 212; /* Cyan */
+  --success-color: 76, 175, 80; /* Green */
+  --warning-color: 255, 193, 7; /* Amber */
+}
+
+@layer base {
+  :root {
+    --background: 47 95% 99%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 27 96% 61%;
+    --primary-foreground: 60 9.1% 97.8%;
+    --secondary: 264 67% 42%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 187 100% 42%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 27 96% 61%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 27 96% 61%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 264 67% 42%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 187 100% 42%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 27 96% 61%;
+  }
+  .font-comic {
+    font-family: var(--font-comic);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better text rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Updated selection color */
+::selection {
+  @apply bg-orange-400 text-white;
+}
+
+/* Updated gradient text */
+.gradient-text {
+  @apply bg-gradient-to-r from-orange-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent;
+}
+
+/* New color utility classes */
+.bg-primary-gradient {
+  @apply bg-gradient-to-r from-orange-400 via-purple-500 to-cyan-400;
+}
+
+.bg-secondary-gradient {
+  @apply bg-gradient-to-r from-amber-400 via-orange-500 to-purple-500;
+}
+
+.hover-lift {
+  @apply transition-all duration-300 hover:scale-105 hover:shadow-lg;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+.animate-slideRight {
+  animation: slideRight 0.6s ease-out forwards;
+}
+
+.animate-slideLeft {
+  animation: slideLeft 0.6s ease-out forwards;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-comic;
+}
