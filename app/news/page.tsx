@@ -15,7 +15,7 @@ const container = {
   }
 };
 
-const item = {
+const itemAnimation = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0 }
 };
@@ -105,7 +105,7 @@ export default function NewsPage() {
             animate="show"
             className="text-center max-w-3xl mx-auto"
           >
-            <motion.div variants={item} className="relative inline-block mb-6">
+            <motion.div variants={itemAnimation} className="relative inline-block mb-6">
               <h1 className="text-5xl md:text-6xl font-bold font-comic bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 bg-clip-text text-transparent">
                 School News
               </h1>
@@ -125,7 +125,7 @@ export default function NewsPage() {
               </motion.div>
             </motion.div>
             <motion.p
-              variants={item}
+              variants={itemAnimation}
               className="text-xl text-gray-600 mb-8"
             >
               Stay updated with the latest happenings at our school
@@ -143,10 +143,10 @@ export default function NewsPage() {
         className="py-16 container mx-auto px-4"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {news.map((item, index) => (
+          {news.map((newsItem) => (
             <motion.div
-              key={item.id}
-              variants={item}
+              key={newsItem.id}
+              variants={itemAnimation}
               className="group"
               whileHover={{ y: -5 }}
             >
@@ -165,20 +165,20 @@ export default function NewsPage() {
                     }}
                   />
                   <div className="flex items-center gap-4 mb-4">
-                    <Badge className={`${getCategoryBadgeColor(item.category)} transform transition-transform group-hover:scale-105`}>
+                    <Badge className={`${getCategoryBadgeColor(newsItem.category)} transform transition-transform group-hover:scale-105`}>
                       <Tag className="h-3 w-3 mr-1" />
-                      {item.category}
+                      {newsItem.category}
                     </Badge>
                     <div className="flex items-center text-sm text-gray-500">
                       <Calendar className="h-4 w-4 mr-1" />
-                      {new Date(item.date).toLocaleDateString()}
+                      {new Date(newsItem.date).toLocaleDateString()}
                     </div>
                   </div>
                   <motion.h2 
                     className="text-2xl font-bold font-comic mb-4 bg-gradient-to-r from-purple-600 to-orange-500 bg-clip-text text-transparent relative inline-block"
                     whileHover={{ scale: 1.02 }}
                   >
-                    {item.title}
+                    {newsItem.title}
                     <motion.div
                       className="absolute -right-4 -top-4 text-2xl opacity-0 group-hover:opacity-100 transition-opacity"
                       animate={{
@@ -191,10 +191,10 @@ export default function NewsPage() {
                         ease: "easeInOut"
                       }}
                     >
-                      {["📚", "✏️", "🎨", "⭐"][index % 4]}
+                      {["📚", "✏️", "🎨", "⭐"][newsItem.id % 4]}
                     </motion.div>
                   </motion.h2>
-                  <p className="text-gray-600 mb-6 line-clamp-3">{item.excerpt}</p>
+                  <p className="text-gray-600 mb-6 line-clamp-3">{newsItem.excerpt}</p>
                   <motion.div
                     className="flex items-center text-purple-600 font-semibold group-hover:translate-x-2 transition-all"
                     whileHover={{ x: 10 }}

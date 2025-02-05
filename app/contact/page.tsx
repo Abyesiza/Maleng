@@ -14,7 +14,7 @@ const container = {
   }
 };
 
-const item = {
+const itemAnimation = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0 }
 };
@@ -90,7 +90,7 @@ export default function ContactPage() {
             animate="show"
             className="text-center max-w-3xl mx-auto"
           >
-            <motion.div variants={item} className="relative inline-block mb-6">
+            <motion.div variants={itemAnimation} className="relative inline-block mb-6">
               <h1 className="text-5xl md:text-6xl font-bold font-comic bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 bg-clip-text text-transparent">
                 Contact Us
               </h1>
@@ -110,7 +110,7 @@ export default function ContactPage() {
               </motion.div>
             </motion.div>
             <motion.p
-              variants={item}
+              variants={itemAnimation}
               className="text-xl text-gray-600 mb-8"
             >
               We'd love to hear from you! Get in touch with us.
@@ -131,7 +131,7 @@ export default function ContactPage() {
           {contactInfo.map((info, index) => (
             <motion.div
               key={index}
-              variants={item}
+              variants={itemAnimation}
               whileHover={{ y: -5 }}
               className="group"
             >
@@ -203,12 +203,12 @@ export default function ContactPage() {
             />
             <div className="relative z-10">
               <motion.h2
-                variants={item}
+                variants={itemAnimation}
                 className="text-3xl font-bold font-comic text-center mb-8 bg-gradient-to-r from-purple-600 to-orange-500 bg-clip-text text-transparent"
               >
                 Send us a Message
               </motion.h2>
-              <motion.form variants={item} className="space-y-6">
+              <motion.form variants={itemAnimation} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
@@ -279,14 +279,14 @@ export default function ContactPage() {
           />
           <div className="relative z-10">
             <motion.h2
-              variants={item}
+              variants={itemAnimation}
               className="text-3xl font-bold font-comic text-center mb-8 bg-gradient-to-r from-purple-600 to-orange-500 bg-clip-text text-transparent flex items-center justify-center gap-3"
             >
               <School className="h-8 w-8" />
               Visit Our School
             </motion.h2>
             <motion.div
-              variants={item}
+              variants={itemAnimation}
               className="aspect-[16/9] rounded-lg overflow-hidden bg-gray-100"
             >
               {/* Replace src with your actual Google Maps embed URL */}

@@ -18,7 +18,7 @@ const container = {
   }
 };
 
-const item = {
+const itemAnimation = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0 }
 };
@@ -90,7 +90,7 @@ export default function Academics() {
           ].map((stat, index) => (
             <motion.div
               key={index}
-              variants={item}
+              variants={itemAnimation}
               className="relative bg-white rounded-xl p-6 shadow-lg group hover:shadow-xl transition-all duration-300"
               whileHover={{ scale: 1.05 }}
             >
@@ -155,7 +155,7 @@ export default function Academics() {
             ].map((subject, index) => (
               <motion.div
                 key={index}
-                variants={item}
+                variants={itemAnimation}
                 className="relative bg-white rounded-xl p-8 shadow-lg group hover:shadow-xl transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
               >
@@ -250,7 +250,7 @@ export default function Academics() {
           ].map((program, index) => (
             <motion.div
               key={index}
-              variants={item}
+              variants={itemAnimation}
               className="bg-white rounded-xl p-6 shadow-lg group hover:shadow-xl transition-all duration-300"
               whileHover={{ scale: 1.05 }}
             >

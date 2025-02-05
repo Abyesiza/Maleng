@@ -25,7 +25,7 @@ const container = {
   }
 };
 
-const item = {
+const itemAnimation = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0 }
 };
@@ -82,7 +82,7 @@ export default function Admissions() {
             animate="show"
             className="text-center max-w-3xl mx-auto"
           >
-            <motion.div variants={item} className="relative inline-block mb-6">
+            <motion.div variants={itemAnimation} className="relative inline-block mb-6">
               <h1 className="text-5xl md:text-6xl font-bold font-comic bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 bg-clip-text text-transparent">
                 Join Our School Family
               </h1>
@@ -102,7 +102,7 @@ export default function Admissions() {
               </motion.div>
             </motion.div>
             <motion.p
-              variants={item}
+              variants={itemAnimation}
               className="text-xl text-gray-600 mb-8"
             >
               Start your child's educational journey in a nurturing and creative environment
@@ -145,7 +145,7 @@ export default function Admissions() {
           ].map((feature, index) => (
             <motion.div
               key={index}
-              variants={item}
+              variants={itemAnimation}
               className="relative bg-white rounded-xl p-8 shadow-lg group hover:shadow-xl transition-all duration-300"
               whileHover={{ scale: 1.05 }}
             >
@@ -220,7 +220,7 @@ export default function Admissions() {
             ].map((step, index) => (
               <motion.div
                 key={index}
-                variants={item}
+                variants={itemAnimation}
                 className="relative bg-white rounded-xl p-6 shadow-lg group hover:shadow-xl transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
               >
@@ -269,7 +269,7 @@ export default function Admissions() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <motion.div
-            variants={item}
+            variants={itemAnimation}
             className="bg-white rounded-xl p-8 shadow-lg"
           >
             <h3 className="text-2xl font-bold font-comic mb-6 text-gray-800">Required Documents</h3>
@@ -307,7 +307,7 @@ export default function Admissions() {
             </ul>
           </motion.div>
           <motion.div
-            variants={item}
+            variants={itemAnimation}
             className="bg-white rounded-xl p-8 shadow-lg"
           >
             <h3 className="text-2xl font-bold font-comic mb-6 text-gray-800">Age Requirements</h3>

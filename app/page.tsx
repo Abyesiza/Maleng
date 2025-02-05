@@ -27,7 +27,7 @@ const container = {
   }
 };
 
-const item = {
+const itemAnimation = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0 }
 };
@@ -69,7 +69,7 @@ export default function Home() {
           ].map((feature, index) => (
             <motion.div
               key={index}
-              variants={item}
+              variants={itemAnimation}
               className="relative bg-white rounded-xl p-8 shadow-lg group hover:shadow-xl transition-all duration-300"
               whileHover={{ scale: 1.05 }}
             >
@@ -109,7 +109,7 @@ export default function Home() {
       >
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div variants={item} className="space-y-6">
+            <motion.div variants={itemAnimation} className="space-y-6">
               <h2 className="text-4xl font-bold font-comic bg-gradient-to-r from-purple-600 to-orange-500 bg-clip-text text-transparent">
                 Welcome to Maleng Primary School
               </h2>
@@ -127,7 +127,7 @@ export default function Home() {
               </div>
             </motion.div>
             <motion.div
-              variants={item}
+              variants={itemAnimation}
               className="relative h-[400px] bg-gradient-to-br from-purple-100 to-orange-100 rounded-2xl overflow-hidden"
             >
               {/* Animated School Elements */}
@@ -168,7 +168,7 @@ export default function Home() {
       >
         <div className="max-w-7xl mx-auto px-4">
           <motion.h2
-            variants={item}
+            variants={itemAnimation}
             className="text-4xl font-bold font-comic text-center mb-12 bg-gradient-to-r from-purple-600 to-orange-500 bg-clip-text text-transparent"
           >
             Explore Our School
@@ -206,7 +206,7 @@ export default function Home() {
             ].map((page, index) => (
               <motion.div
                 key={index}
-                variants={item}
+                variants={itemAnimation}
                 className="group relative"
               >
                 <Link href={page.link}>
@@ -268,7 +268,7 @@ export default function Home() {
       >
         <div className="max-w-7xl mx-auto px-4">
           <motion.h2
-            variants={item}
+            variants={itemAnimation}
             className="text-4xl font-bold font-comic text-center mb-12 bg-gradient-to-r from-purple-600 to-orange-500 bg-clip-text text-transparent"
           >
             Why Choose Maleng Primary?
@@ -296,7 +296,7 @@ export default function Home() {
             ].map((feature, index) => (
               <motion.div
                 key={index}
-                variants={item}
+                variants={itemAnimation}
                 className="bg-white rounded-xl p-8 shadow-lg group hover:shadow-xl transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
               >

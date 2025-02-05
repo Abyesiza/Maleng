@@ -16,7 +16,7 @@ const container = {
   }
 };
 
-const item = {
+const itemAnimation = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0 }
 };
@@ -110,7 +110,7 @@ export default function MealsPage() {
             animate="show"
             className="text-center max-w-3xl mx-auto"
           >
-            <motion.div variants={item} className="relative inline-block mb-6">
+            <motion.div variants={itemAnimation} className="relative inline-block mb-6">
               <h1 className="text-5xl md:text-6xl font-bold font-comic bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 bg-clip-text text-transparent">
                 School Meals
               </h1>
@@ -130,7 +130,7 @@ export default function MealsPage() {
               </motion.div>
             </motion.div>
             <motion.p
-              variants={item}
+              variants={itemAnimation}
               className="text-xl text-gray-600 mb-8"
             >
               Nutritious and delicious meals for growing minds
@@ -148,7 +148,7 @@ export default function MealsPage() {
         className="py-16 container mx-auto px-4"
       >
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <motion.div variants={item}>
+          <motion.div variants={itemAnimation}>
             <Card className="p-6">
               <h2 className="text-xl font-semibold mb-4 flex items-center gap-2 bg-gradient-to-r from-purple-600 to-orange-500 bg-clip-text text-transparent">
                 <CalendarIcon className="h-5 w-5 text-purple-500" />
@@ -163,7 +163,7 @@ export default function MealsPage() {
             </Card>
           </motion.div>
 
-          <motion.div variants={item} className="lg:col-span-2">
+          <motion.div variants={itemAnimation} className="lg:col-span-2">
             <Card className="p-6">
               <h2 className="text-xl font-semibold mb-6 flex items-center gap-2 bg-gradient-to-r from-purple-600 to-orange-500 bg-clip-text text-transparent">
                 <UtensilsCrossed className="h-5 w-5 text-purple-500" />
@@ -206,7 +206,7 @@ export default function MealsPage() {
               </div>
 
               <motion.div
-                variants={item}
+                variants={itemAnimation}
                 className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl"
               >
                 <h3 className="font-semibold text-blue-800 mb-4 flex items-center gap-2">

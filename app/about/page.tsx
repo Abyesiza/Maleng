@@ -13,7 +13,7 @@ const container = {
   }
 };
 
-const item = {
+const itemAnimation = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0 }
 };
@@ -58,7 +58,7 @@ export default function About() {
             animate="show"
             className="text-center max-w-3xl mx-auto"
           >
-            <motion.div variants={item} className="relative inline-block mb-6">
+            <motion.div variants={itemAnimation} className="relative inline-block mb-6">
               <h1 className="text-5xl md:text-6xl font-bold font-comic bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 bg-clip-text text-transparent">
                 Our Story
               </h1>
@@ -78,7 +78,7 @@ export default function About() {
               </motion.div>
             </motion.div>
             <motion.p
-              variants={item}
+              variants={itemAnimation}
               className="text-xl text-gray-600 mb-8"
             >
               Building bright futures through love, learning, and laughter
@@ -97,7 +97,7 @@ export default function About() {
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <motion.div
-            variants={item}
+            variants={itemAnimation}
             className="bg-white rounded-xl p-8 shadow-lg group hover:shadow-xl transition-all duration-300"
             whileHover={{ scale: 1.02 }}
           >
@@ -122,7 +122,7 @@ export default function About() {
           </motion.div>
 
           <motion.div
-            variants={item}
+            variants={itemAnimation}
             className="bg-white rounded-xl p-8 shadow-lg group hover:shadow-xl transition-all duration-300"
             whileHover={{ scale: 1.02 }}
           >
@@ -190,7 +190,7 @@ export default function About() {
             ].map((value, index) => (
               <motion.div
                 key={index}
-                variants={item}
+                variants={itemAnimation}
                 className="bg-white rounded-xl p-6 shadow-lg group hover:shadow-xl transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
               >
@@ -243,7 +243,7 @@ export default function About() {
           ].map((milestone, index) => (
             <motion.div
               key={index}
-              variants={item}
+              variants={itemAnimation}
               className="flex items-center gap-8"
             >
               <motion.div
