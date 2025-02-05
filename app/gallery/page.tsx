@@ -16,7 +16,7 @@ const container = {
   }
 };
 
-const item = {
+const itemAnimation = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0 }
 };
@@ -120,7 +120,7 @@ export default function GalleryPage() {
             animate="show"
             className="text-center max-w-3xl mx-auto"
           >
-            <motion.div variants={item} className="relative inline-block mb-6">
+            <motion.div variants={itemAnimation} className="relative inline-block mb-6">
               <h1 className="text-5xl md:text-6xl font-bold font-comic bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 bg-clip-text text-transparent">
                 Photo Gallery
               </h1>
@@ -140,7 +140,7 @@ export default function GalleryPage() {
               </motion.div>
             </motion.div>
             <motion.p
-              variants={item}
+              variants={itemAnimation}
               className="text-xl text-gray-600 mb-8"
             >
               Capturing moments and memories at our school
@@ -161,7 +161,7 @@ export default function GalleryPage() {
           {categories.map((category) => (
             <motion.button
               key={category.id}
-              variants={item}
+              variants={itemAnimation}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className={`px-6 py-3 rounded-full font-bold transition-all duration-300 ${
@@ -186,10 +186,10 @@ export default function GalleryPage() {
         className="py-16 container mx-auto px-4"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredGallery.map((item, index) => (
+          {filteredGallery.map((galleryItem) => (
             <motion.div
-              key={item.id}
-              variants={item}
+              key={galleryItem.id}
+              variants={itemAnimation}
               className="group"
               whileHover={{ y: -5 }}
             >
@@ -210,12 +210,12 @@ export default function GalleryPage() {
                 <div className="p-6">
                   <Badge className="mb-4 bg-gradient-to-r from-purple-100 to-orange-100 text-purple-600">
                     <Tag className="w-3 h-3 mr-1" />
-                    {item.category.charAt(0).toUpperCase() + item.category.slice(1)}
+                    {galleryItem.category.charAt(0).toUpperCase() + galleryItem.category.slice(1)}
                   </Badge>
                   <h3 className="text-xl font-bold font-comic mb-2 bg-gradient-to-r from-purple-600 to-orange-500 bg-clip-text text-transparent">
-                    {item.title}
+                    {galleryItem.title}
                   </h3>
-                  <p className="text-gray-600">{item.description}</p>
+                  <p className="text-gray-600">{galleryItem.description}</p>
                 </div>
               </Card>
             </motion.div>
